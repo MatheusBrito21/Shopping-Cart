@@ -17,7 +17,7 @@ public class ProdutoModel implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
 	private Double preco;
@@ -39,6 +39,7 @@ public class ProdutoModel implements Serializable {
 	//Construtor que recebe um ProdutoDTO
 	public ProdutoModel(ProdutoDTO objDTO) {
 		super();
+		this.id = objDTO.getId();
 		this.nome = objDTO.getNome();
 		this.preco = objDTO.getPreco();
 		this.qtd_estoque = objDTO.getQtd_estoque();
