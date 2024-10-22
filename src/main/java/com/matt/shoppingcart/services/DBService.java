@@ -23,6 +23,7 @@ public class DBService {
 		listaProdutosPadrao.add(new ProdutoModel("O Iluminado", 29.9, 50));
 		listaProdutosPadrao.add(new ProdutoModel("Percy Jackson e os Olimpianos - O Ladrão de Raios", 19.9, 80));
 		listaProdutosPadrao.add(new ProdutoModel("Uma Breve História do Mundo", 19.9, 20));
+		listaProdutosPadrao.add(new ProdutoModel("Demolidor - Frank Miller Vol 1", 119.9, 20));
 		
 		produtoRepository.saveAll(listaProdutosPadrao);
 		
