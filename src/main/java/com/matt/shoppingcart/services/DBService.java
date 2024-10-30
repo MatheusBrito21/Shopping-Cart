@@ -18,12 +18,12 @@ public class DBService {
 		
 		List<ProdutoModel> listaProdutosPadrao = new ArrayList<>();
 		
-		listaProdutosPadrao.add(new ProdutoModel("Jogador Numero 1", 39.9, 100));
-		listaProdutosPadrao.add(new ProdutoModel("Jogador Numero 2", 49.9, 100));
-		listaProdutosPadrao.add(new ProdutoModel("O Iluminado", 29.9, 50));
-		listaProdutosPadrao.add(new ProdutoModel("Percy Jackson e os Olimpianos - O Ladrão de Raios", 19.9, 80));
-		listaProdutosPadrao.add(new ProdutoModel("Uma Breve História do Mundo", 19.9, 20));
-		listaProdutosPadrao.add(new ProdutoModel("Demolidor - Frank Miller Vol 1", 119.9, 20));
+		listaProdutosPadrao.add(new ProdutoModel("Jogador Numero 1", 39.9, null, null, 100));
+		listaProdutosPadrao.add(new ProdutoModel("Jogador Numero 2", 49.9,null, null,  100));
+		listaProdutosPadrao.add(new ProdutoModel("O Iluminado", 29.9,null, null,  50));
+		listaProdutosPadrao.add(new ProdutoModel("Percy Jackson e os Olimpianos - O Ladrão de Raios", 19.9,null, null,  80));
+		listaProdutosPadrao.add(new ProdutoModel("Uma Breve História do Mundo", 19.9,null, null,  20));
+		listaProdutosPadrao.add(new ProdutoModel("Demolidor - Frank Miller Vol 1", 119.9,null, null,  20));
 		
 		produtoRepository.saveAll(listaProdutosPadrao);
 		

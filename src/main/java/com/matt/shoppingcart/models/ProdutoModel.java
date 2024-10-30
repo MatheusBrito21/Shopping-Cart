@@ -21,6 +21,8 @@ public class ProdutoModel implements Serializable {
 	private Integer id;
 	private String nome;
 	private Double preco;
+	private String descricao;
+	private String fabricante;
 	@NotNull
 	private int qtd_estoque;
 	
@@ -28,14 +30,15 @@ public class ProdutoModel implements Serializable {
 		super();
 	}
 	
-	//Construtor padrao
-	public ProdutoModel(String nome, Double preco, @NotNull int qtd_estoque) {
+	public ProdutoModel(String nome, Double preco, String descricao, String fabricante, @NotNull int qtd_estoque) {
 		super();
 		this.nome = nome;
 		this.preco = preco;
+		this.descricao = descricao;
+		this.fabricante = fabricante;
 		this.qtd_estoque = qtd_estoque;
 	}
-	
+
 	//Construtor que recebe um ProdutoDTO
 	public ProdutoModel(ProdutoDTO objDTO) {
 		super();
@@ -43,6 +46,8 @@ public class ProdutoModel implements Serializable {
 		this.nome = objDTO.getNome();
 		this.preco = objDTO.getPreco();
 		this.qtd_estoque = objDTO.getQtd_estoque();
+		this.fabricante = objDTO.getFabricante();
+		this.descricao = objDTO.getDescricao();
 	}
 
 	public Integer getId() {
@@ -69,6 +74,23 @@ public class ProdutoModel implements Serializable {
 	public void setQtd_estoque(int qtd_estoque) {
 		this.qtd_estoque = qtd_estoque;
 	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getFabricante() {
+		return fabricante;
+	}
+
+	public void setFabricante(String fabricante) {
+		this.fabricante = fabricante;
+	}
+	
 	
 	
 	

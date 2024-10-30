@@ -11,25 +11,33 @@ public class ProdutoDTO {
 	private String nome;
 	@NotNull(message = "O campo PREÇO é obrigatório!")
 	private Double preco;
+	private String descricao;
+	private String fabricante;
 	private int qtd_estoque;
 	
 	public ProdutoDTO() {
 		super();
 	}
 
-	public ProdutoDTO(Integer id, String nome,Double preco, int qtd_estoque) {
+	public ProdutoDTO(Integer id, String nome,Double preco, String descricao, String fabricante,int qtd_estoque) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.preco = preco;
+		this.descricao = descricao;
+		this.fabricante = fabricante;
 		this.qtd_estoque = qtd_estoque;
 	}
+
+
 
 	public ProdutoDTO(ProdutoModel obj) {
 		this.id = obj.getId();
 		this.nome = obj.getNome();
 		this.preco = obj.getPreco();
 		this.qtd_estoque = obj.getQtd_estoque();
+		this.fabricante = obj.getFabricante();
+		this.descricao = obj.getDescricao();
 	}
 
 	public Integer getId() {
@@ -62,6 +70,22 @@ public class ProdutoDTO {
 
 	public void setQtd_estoque(int qtd_estoque) {
 		this.qtd_estoque = qtd_estoque;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getFabricante() {
+		return fabricante;
+	}
+
+	public void setFabricante(String fabricante) {
+		this.fabricante = fabricante;
 	}
 	
 	
